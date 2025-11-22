@@ -62,8 +62,8 @@ export default function AdminDashboard() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"&gt;
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link href="/dashboard" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6 transition-colors"&gt;
           <ArrowLeft className="w-4 h-4 mr-2" /&gt;
           Back to Dashboard
