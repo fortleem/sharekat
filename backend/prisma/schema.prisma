@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  role      String
+  documents String?
+  createdAt DateTime @default(now())
+}
+
+model Project {
+  id            String   @id @default(uuid())
+  title         String
+  description   String
+  targetCapital Decimal
+  raisedCapital Decimal  @default(0)
+  status        String   @default("PENDING")
+  managerId     String
+  createdAt     DateTime @default(now())
+}
+
+model Investment {
+  id          String   @id @default(uuid())
+  userId      String
+  projectId   String
+  amount      Decimal
+  paid        Boolean  @default(false)
+  securityDeposit Decimal?
+  deadline    DateTime?
+}
