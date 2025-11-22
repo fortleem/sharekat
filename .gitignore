@@ -50,3 +50,4 @@ aider-setup/
 ._*
 .Spotlight-V100
 .Trashes
+.env.vercel
