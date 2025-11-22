@@ -9,7 +9,7 @@ interface AnimatedLayoutProps {
 }
 
 export const AnimatedLayout = ({ children, className = '' }: AnimatedLayoutProps) => {
-  return {
+  <motion.div
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -19,8 +19,8 @@ export const AnimatedLayout = ({ children, className = '' }: AnimatedLayoutProps
     >
       {children}
     </motion.div>
-  };
-};
+  </motion.div>
+</motion.div>
 
 export const useAnimations = () => ({
   initial: { opacity: 0, y: 20 },
